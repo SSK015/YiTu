@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 2.8.12)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 project(YiTu_GP LANGUAGES CXX CUDA)
 
 add_subdirectory(pybind11)
 
 include_directories(
     "/usr/lib/x86_64-linux-gnu/"
-    "/usr/lib/x86_64-linux-gnu/openmpi/include"
+    "/data/ywxia/openmpi-5.0.3/target/include"    
 )
 
 set(dso_SOURCE_FILES
@@ -34,4 +37,4 @@ endif(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
 pybind11_add_module(YiTu_GP YiTu_GP.cpp ${dso_SOURCE_FILES})
 pybind11_add_module(Tools ${PROJECT_SOURCE_DIR}/tools/converter.cpp ${PROJECT_SOURCE_DIR}/shared/globals.hpp)
 
-target_link_libraries(YiTu_GP PUBLIC /usr/lib/x86_64-linux-gnu/libmpi.so)
+target_link_libraries(YiTu_GP PUBLIC /data/ywxia/openmpi-5.0.3/target/lib/libmpi.so)

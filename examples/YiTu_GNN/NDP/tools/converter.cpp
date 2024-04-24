@@ -18,7 +18,7 @@ string GetFileExtension(string fileName)
     return "";
 }
 
-int convert(py::str path)
+int convert(pybind11::str path)
 {
 	string input = string(path);
 	if(GetFileExtension(input) == "el")
