@@ -24,6 +24,7 @@ set(dso_SOURCE_FILES
 
     ${PROJECT_SOURCE_DIR}/ndp/bc_sig_async.cu
     ${PROJECT_SOURCE_DIR}/ndp/bfs_sig_async.cu
+    ${PROJECT_SOURCE_DIR}/ndp/dfs_sig_async.cu
     ${PROJECT_SOURCE_DIR}/ndp/cc_sig_async.cu
     ${PROJECT_SOURCE_DIR}/ndp/pr_sig_async.cu
     ${PROJECT_SOURCE_DIR}/ndp/sssp_sig_async.cu

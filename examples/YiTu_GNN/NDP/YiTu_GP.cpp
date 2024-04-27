@@ -57,6 +57,11 @@ void YiTu_GP(py::str method, py::list argulist){
 		cout << "sswp single-async!" << endl;
 		sswp_sig_async(arguments);
 	}
+	else if(algorithm == "dfs") {
+		ArgumentParser arguments(argc, argv, true, false);
+		cout << "dfs single-async!" << endl;
+		bfs_sig_async(arguments);
+	}
 	else {
 		cout << "algorithm " << algorithm << " not support!" << endl;
 		cout << "support algorithm: bfs, bc, cc, pr, sssp, sswp!" << endl;
